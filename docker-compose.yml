@@ -1,11 +1,11 @@
 version: '3.8'
 
-# Docker connection string: postgres://postgres:postgres@localhost:5432/
+# Docker connection string: postgres://postgres:postgres@localhost:5430/
 
 services:
   db:
     image: postgres
-    container_name: medium-clone-db
+    container_name: bookmark-it-db
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -15,7 +15,7 @@ services:
     volumes:
       - medium_db:/var/lib/postgresql/data
     ports:
-      - '5432:5432'
+      - '5430:5430'
 
 volumes:
   medium_db:
