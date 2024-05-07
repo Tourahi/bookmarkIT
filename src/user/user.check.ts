@@ -35,4 +35,34 @@ export class UserCheck {
     return true;
   }
 
+  isNotExistsBothPassword(bool: boolean): boolean {
+    if (!bool) {
+      throw new HttpExceptionCustom(
+        'New password and old password are required', 
+        HttpStatus.BAD_REQUEST
+      );
+    }
+    return true;
+  }
+
+  isTokenExist(bool: boolean): boolean {
+    if (!bool) {
+      throw new HttpExceptionCustom(
+        'Not authorized', 
+        HttpStatus.UNAUTHORIZED
+      );
+    }
+    return true;
+  }
+
+  isNotEmptyUpdate(bool: boolean): boolean {
+    if (!bool) {
+      throw new HttpExceptionCustom(
+        'At least one field must be filled', 
+        HttpStatus.UNPROCESSABLE_ENTITY
+      );
+    }
+    return true;
+  }
+
 }
