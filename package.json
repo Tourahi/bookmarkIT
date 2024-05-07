@@ -11,7 +11,8 @@
     "start": "npx dotenv -e .env.prod --  nest start",
     "start:dev": "npx dotenv -e .env -- nest start --watch",
     "migrate:dev": "npx dotenv -e .env -- npx prisma migrate deploy",
-    "migrate:create": "npx dotenv -e .env.dev -- npx prisma migrate dev --name"
+    "migrate:create": "npx dotenv -e .env.dev -- npx prisma migrate dev --name",
+    "test": "jest"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
